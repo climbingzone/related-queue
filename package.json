@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "node ./configure-references.js",
+    "prepare": "node ./configure-references.js && cp ./README.md ./packages/related-queue",
     "build": "lerna exec yarn build",
     "test": "lerna exec yarn test -- --silent",
     "clean": "lerna exec yarn clean"
