@@ -1,0 +1,29 @@
+{
+  "name": "related-queue",
+  "version": "0.0.1",
+  "description": "A Javascript module to manage queuing items which have relationships to each other which need deferred fulfillment.",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
+  "repository": "https://github.com/climbingzone/related-queue",
+  "author": "Nick McIntosh <2713055+heysailor@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "compile": "tsc --build tsconfig.json && tsc --build tsconfig.cjs.json && cp \"./package.json\" ./lib/",
+    "build": "yarn clean && yarn compile",
+    "prepack": "npm run compile",
+    "test": "echo No test"
+  },
+  "dependencies": {
+    "@related-queue/core": "0.0.1",
+    "@related-queue/memory-storage": "0.0.1",
+    "@related-queue/shared": "0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}

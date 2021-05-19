@@ -1,0 +1,22 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "composite": true,
+        "outDir": "./lib/esm",
+        "rootDir": "src"
+    },
+    "include": [
+        "./src"
+    ],
+    "references": [
+        {
+            "path": "../core"
+        },
+        {
+            "path": "../memory-storage"
+        },
+        {
+          "path": "../shared"
+        }
+    ]
+}

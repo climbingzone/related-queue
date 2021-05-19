@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2020",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "baseUrl": "./packages",
+    "paths": {
+      "@related-queue/shared/*": ["shared/src/*"],
+      "@related-queue/core/*": ["core/src/*"],
+      "@related-queue/memory-storage/*": ["memory-storage/src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "packages/core"
+    },
+    {
+      "path": "packages/memory-storage"
+    },
+    {
+      "path": "packages/related-queue"
+    },
+    {
+      "path": "packages/shared"
+    }
+  ],
+  "files": []
+}

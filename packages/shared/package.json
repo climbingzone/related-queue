@@ -1,0 +1,24 @@
+{
+  "name": "@related-queue/shared",
+  "version": "0.0.1",
+  "description": "Shared logic for @related-queue modules.",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
+  "repository": "https://github.com/climbingzone/related-queue",
+  "author": "Nick McIntosh <2713055+heysailor@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "compile": "tsc --build tsconfig.json && tsc --build tsconfig.cjs.json && cp \"./package.json\" ./lib/",
+    "build": "yarn clean && yarn compile",
+    "prepack": "npm run compile",
+    "test": "echo No tests"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
